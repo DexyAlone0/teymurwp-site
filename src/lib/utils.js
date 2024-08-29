@@ -15,3 +15,13 @@ export function getHoverColorClass(index) {
   ];
   return colors[index % 5];
 }
+export function getColorClass(index) {
+  const colors = [
+      'bg-red-500/10',
+      'bg-green-500/10',
+      'bg-blue-500/10',
+      'bg-yellow-500/10',
+      'bg-purple-500/10',
+  ];
+  return colors[index % 5];
+}
