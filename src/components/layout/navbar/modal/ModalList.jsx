@@ -1,51 +1,28 @@
 import React from "react";
 import { FaAngleRight } from "react-icons/fa6";
-import { getHoverColorClass } from "@/lib/utils";
 
-export default function ModalList({
-  category,
-  index,
-  setActiveCategory,
-  onLeave,
-  activeCategory,
-}) {
-  const hoverClass = getHoverColorClass(index);
+export default function ModalList({ category, index, setActiveCategory, onLeave, activeCategory }) {
   const isActive = category.title === activeCategory;
 
   return (
     <li
       key={category.id}
-      className={`p-1 px-4 cursor-pointer m-0 text-base ${
-        isActive ? hoverClass : ""
+      className={`p-2 px-4 cursor-pointer m-0 text-base transition ${
+        isActive ? "bg-emerald-50" : "bg-white hover:bg-gray-100"
       }`}
-      onMouseEnter={() => setActiveCategory(category.title)} // Hover durumu aktif
-      onMouseLeave={onLeave} // Hover durumu dışı
+      onMouseEnter={() => setActiveCategory(category.title)}
+      onMouseLeave={onLeave}
     >
-      <a
-        href="#"
-        className="flex items-center justify-between m-0 p-0 border-none text-base no-underline text-blue-900 transition duration-200"
-      >
-        <div className="min-w-7 min-h-8 w-7 h-8 mr-2">
-          <div className="inline-block max-w-full overflow-hidden relative">
-            <div className="block max-w-full">
-              <img
-                alt={category.title}
-                aria-hidden="true"
-                role="presentation"
-                src={category.imageUrl}
-                className="block w-full h-8 object-cover"
-              />
-            </div>
-          </div>
+      <a href="#" className="flex items-center justify-between text-gray-900">
+        <div className="flex items-center">
+          <img
+            src={category.imageUrl}
+            alt={category.title}
+            className="w-6 h-6 mr-2"
+          />
+          <p className="text-sm font-semibold">{category.title}</p>
         </div>
-        <div className="flex justify-between items-center w-full">
-          <p className="m-0 p-0 text-sm leading-5 text-blue-900">
-            {category.title}
-          </p>
-          <span tabIndex="0" className="relative block cursor-pointer">
-            <FaAngleRight />
-          </span>
-        </div>
+        <FaAngleRight className="text-gray-400" />
       </a>
     </li>
   );

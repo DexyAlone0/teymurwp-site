@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaAngleRight } from "react-icons/fa6";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { categoriesImageMockData, navbarCategoryMockData } from "@/testData/index.js";
-import { getColorClass } from "@/lib/utils";
+import { getHoverColorClass } from "@/lib/utils"; 
 
 export default function CategoryMobile() {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -34,19 +34,19 @@ export default function CategoryMobile() {
           <FaAngleRight className="text-sm text-gray-400" />
         </div>
       </SheetTrigger>
-      <SheetContent className="md:hidden w-full h-full overflow-y-auto">
+      <SheetContent className="w-full h-full overflow-y-auto">
         <SheetHeader>
           <SheetTitle>Kategoriler</SheetTitle>
         </SheetHeader>
 
         {/* Ana Kategoriler */}
         {!selectedCategory && (
-          <div className="p-4">
+          <div className="p-4 ">
             <ul className="space-y-2">
               {categoriesImageMockData.map((category, index) => (
                 <li
                   key={category.id}
-                  className={`p-4 rounded-lg cursor-pointer flex items-center justify-between transition duration-200 ease-in-out transform hover:scale-105 ${getColorClass(index)}`}  // Arka plan rengi burada dinamik olarak atanıyor
+                  className={`p-4 rounded-lg cursor-pointer flex items-center justify-between transition duration-200 ease-in-out transform hover:scale-105 ${getHoverColorClass(index)}`}  
                   onClick={() => handleSelectCategory(category)}
                 >
                   <div className="flex items-center space-x-4">
@@ -75,7 +75,7 @@ export default function CategoryMobile() {
               {navbarCategoryMockData[selectedCategory.title]?.subCategories.map((subCategory, index) => (
                 <li
                   key={subCategory.id}
-                  className={`p-4 rounded-lg cursor-pointer flex items-center justify-between transition duration-200 ease-in-out transform hover:scale-105 ${getHoverColorClass(index)}`}  // Alt kategoriler için de dinamik arka plan rengi
+                  className={`p-4 rounded-lg cursor-pointer flex items-center justify-between transition duration-200 ease-in-out transform hover:scale-105 ${getHoverColorClass(index)}`}
                   onClick={() => handleSelectSubCategory(subCategory)}
                 >
                   <div className="flex items-center space-x-4">

@@ -24,9 +24,9 @@ export default function NavbarCategoryModal() {
   };
 
   return (
-    <div className="px-12 pb-4 flex h-[516px] overflow-hidden rounded-b-lg box-border mt-2">
-      <div className="flex bg-white rounded-lg w-full box-border m-0 p-0">
-        <ul className="flex flex-col min-w-[292px] w-[292px] border-r py-4 overflow-scroll box-border m-0 list-none">
+    <div className="flex w-full h-full absolute inset-0 z-50 rounded-lg bg-gray-200">
+      <div className="flex shadow-lg bg-white rounded-lg w-full max-w-6xl mx-auto my-8">
+        <ul className="flex flex-col min-w-[250px] rounded-tl-lg rounded-bl-lg border-r py-4 overflow-y-auto bg-white">
           {categoriesImageMockData.map((c, index) => (
             <ModalList
               key={c.id}
@@ -39,10 +39,12 @@ export default function NavbarCategoryModal() {
             />
           ))}
         </ul>
-        <ModalBodyDesktop
-          navbarCategoryMockData={navbarCategoryMockData}
-          activeCategory={activeCategory || lastActiveCategory}
-        />
+        <div className="flex-grow p-4 overflow-y-auto">
+          <ModalBodyDesktop
+            navbarCategoryMockData={navbarCategoryMockData}
+            activeCategory={activeCategory || lastActiveCategory}
+          />
+        </div>
       </div>
     </div>
   );
