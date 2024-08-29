@@ -1,4 +1,4 @@
-import ProductCard from "@/components/pages/cards/ProductCard.jsx";
+import ProductCard from "@/components/pages/cards/v2/ProductCard.jsx";
 
 const mockData = [
     {
@@ -6,64 +6,80 @@ const mockData = [
         title: "Ürün 1",
         description: "Bu ürün 1'in açıklamasıdır.",
         imageUrl: "https://placehold.co/270x180/png",
+        avatarUrl: "https://github.com/shadcn.png",
         price: 15,
-        date: "2024-08-27"
+        date: "2024-08-27",
+        isPro: true,
     },
     {
         id: 2,
         title: "Ürün 2",
         description: "Bu ürün 2'nin açıklamasıdır.",
         imageUrl: "https://placehold.co/270x180/png",
+        avatarUrl: "https://github.com/shadcn.png",
         price: 20,
-        date: "2024-08-27"
+        date: "2024-08-27",
+        isPro: true,
     },
     {
         id: 3,
         title: "Ürün 3",
         description: "Bu ürün 3'ün açıklamasıdır.",
         imageUrl: "https://placehold.co/270x180/png",
+        avatarUrl: "https://github.com/shadcn.png",
         price: 25,
-        date: "2024-08-27"
+        date: "2024-08-27",
+        isPro: false,
     },
     {
         id: 4,
         title: "Ürün 4",
         description: "Bu ürün 4'ün açıklamasıdır.",
         imageUrl: "https://placehold.co/270x180/png",
+        avatarUrl: "https://github.com/shadcn.png",
         price: 30,
-        date: "2024-08-27"
+        date: "2024-08-27",
+        isPro: false,
     },
     {
         id: 5,
         title: "Ürün 5",
         description: "Bu ürün 5'in açıklamasıdır.",
         imageUrl: "https://placehold.co/270x180/png",
+        avatarUrl: "https://github.com/shadcn.png",
         price: 35,
-        date: "2024-08-27"
+        date: "2024-08-27",
+        isPro: true,
     },
     {
         id: 6,
         title: "Ürün 6",
         description: "Bu ürün 6'nın açıklamasıdır.",
         imageUrl: "https://placehold.co/270x180/png",
+        avatarUrl: "https://github.com/shadcn.png",
         price: 40,
-        date: "2024-08-27"
+        date: "2024-08-27",
+        isPro: true,
     },
     {
         id: 7,
         title: "Ürün 7",
         description: "Bu ürün 7'nin açıklamasıdır.",
         imageUrl: "https://placehold.co/270x180/png",
+        avatarUrl: "https://github.com/shadcn.png",
         price: 45,
-        date: "2024-08-27"
+        date: "2024-08-27",
+        isPro: true,
     },
     {
         id: 8,
         title: "Ürün 8",
         description: "Bu ürün 8'in açıklamasıdır.",
         imageUrl: "https://placehold.co/270x180/png",
+        avatarUrl: "https://github.com/shadcn.png",
         price: 50,
-        date: "2024-08-27"
+        date: "2024-08-27",
+        isPro: false,
     }
 ];
 
