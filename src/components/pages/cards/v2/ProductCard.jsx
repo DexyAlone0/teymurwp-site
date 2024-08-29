@@ -23,7 +23,6 @@ export default function ProductCard({product}) {
             <div className={"flex p-2 items-center justify-between space-x-2"}>
                 <div className={"flex space-x-2 items-center"}>
                     <Avatar className={"w-fit h-7"}>
-                        {/*TODO: change here with avatarUrl*/}
                         <AvatarImage src={avatarUrl}/>
                         <AvatarFallback>{fallbackText}</AvatarFallback>
                     </Avatar>
