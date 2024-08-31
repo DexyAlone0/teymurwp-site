@@ -1,13 +1,12 @@
 import React from 'react';
-import logo from '@/assets/logo.png'; // Logonuzun yolunu doğru ayarlayın
 
 export default function Footer() {
   return (
     <footer style={styles.footer}>
       <div style={styles.container}>
-        {/* Sol üstte logo */}
-        <div style={styles.logoContainer}>
-          <img src={logo} alt="Logo" style={styles.logo} />
+        {/* Sol üstte Navbar metni */}
+        <div style={styles.navbarContainer}>
+          <span style={styles.navbarText}>Navbar</span>
         </div>
 
         <div style={styles.column}>
@@ -57,14 +56,15 @@ const styles = {
     margin: '0 auto',
     padding: '0 20px',
   },
-  logoContainer: {
+  navbarContainer: {
     position: 'absolute',
     top: '10px',
     left: '20px',
   },
-  logo: {
-    width: '60px',
-    height: 'auto',
+  navbarText: {
+    color: '#ffffff', // Beyaz renk
+    fontWeight: '800', // Tailwind `font-extrabold` ağırlığını kullanarak
+    fontSize: '1.5rem', // Tailwind `text-2xl` boyutunu kullanarak
   },
   column: {
     flex: '1 1 200px', // Minimum genişlik 200px
@@ -111,14 +111,14 @@ const responsiveStyles = {
     footer: {
       padding: '10px 0',
     },
-    logoContainer: {
+    navbarContainer: {
       position: 'relative',
       top: 'initial',
       left: 'initial',
       marginBottom: '10px',
     },
-    logo: {
-      width: '50px',
+    navbarText: {
+      fontSize: '1.25rem', // Küçük ekranlarda biraz daha küçük font boyutu
     },
     column: {
       flex: '1 1 100%',
