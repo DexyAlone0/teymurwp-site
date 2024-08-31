@@ -91,7 +91,7 @@ export default function ProductArea() {
                 <span className="text-lg text-blue-400 underline hover:no-underline">Bütün VIP Ilanlar</span>
             </div>
 
-            <div className={"grid grid-cols-1 md:grid-cols-4 gap-4 w-full p-4"}>
+            <div className={"grid grid-cols-2 md:grid-cols-4 gap-4 w-full p-4"}>
                 {
                     mockData.map(p => (
                         <div key={p.id}>

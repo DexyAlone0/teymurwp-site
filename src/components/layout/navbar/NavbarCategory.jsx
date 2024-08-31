@@ -36,7 +36,7 @@ export default function NavbarCategory() {
           <NavbarCategoryNavigationMenu isModalOpen={isModalOpen} />
         </div>
       </div>
-      <div className="w-full  absolute z-10  h-full ">
+      <div className="mx-8 w-5/6 absolute z-10 h-full ">
         {isModalOpen && <NavbarCategoryModal />}
       </div>
     </>
